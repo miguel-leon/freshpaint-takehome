@@ -24,6 +24,7 @@ const CASTING_FUNCTIONS = {
 };
 
 export function tr_cast(data: Data, { property, to }: Cast): Data {
+	if (!(property in data)) return data;
 	const { [property]: value, ...rest } = data;
 	const type: keyof typeof CASTING_FUNCTIONS = typeof value as any;
 	if (type === to) return data;

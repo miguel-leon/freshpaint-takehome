@@ -44,4 +44,9 @@ describe('transformation cast', () => {
 			expect(result).toHaveProperty('d', 'true');
 		});
 	});
+
+	test('do nothing if property does not exist', () => {
+		const result = tr_cast(data, { property: 'x', to: 'nothing' } as any);
+		expect(result).toStrictEqual(data);
+	});
 });
