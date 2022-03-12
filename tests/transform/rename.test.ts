@@ -1,4 +1,4 @@
-import { tr_rename } from '../../src/transform/rename';
+import { tr_rename } from '@src/transform/rename';
 
 
 describe('transformation rename', () => {

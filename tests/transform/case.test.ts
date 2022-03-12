@@ -1,4 +1,4 @@
-import { tr_case } from '../../src/transform/case';
+import { tr_case } from '@src/transform/case';
 
 
 describe('transformation case', () => {

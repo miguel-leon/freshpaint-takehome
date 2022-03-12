@@ -1,5 +1,5 @@
-import { Data } from '@src/transform/transform';
-import { Case } from '@src/transformation';
+import { Data } from './transform';
+import { Case } from '../transformation';
 
 
 const CASE_FUNCTIONS = {

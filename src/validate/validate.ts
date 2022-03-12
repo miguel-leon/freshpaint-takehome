@@ -1,4 +1,4 @@
-import { Transformation } from '@src/transformation';
+import { Transformation } from '../transformation';
 
 
 export function validate(transformation: Partial<Transformation>): boolean {
