@@ -1,5 +1,6 @@
 import { tr_rename } from '../../src/transform/rename';
 
+
 describe('transformation rename', () => {
 
 	test('renames property if it exists', () => {
