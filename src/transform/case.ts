@@ -8,6 +8,7 @@ const CASE_FUNCTIONS = {
 };
 
 export function tr_case(data: Data, { type, property }: Case): Data {
+	if (!(property in data)) return data;
 	const { [property]: value, ...rest } = data;
 	return { ...rest, [property]: CASE_FUNCTIONS[type].call(value) };
 }

@@ -14,4 +14,10 @@ describe('transformation case', () => {
 		const result = tr_case(data, { type: 'uppercase', property: 'a' });
 		expect(result).toEqual({ a: 'XYZ', b: 10 });
 	});
+
+	test('do nothing if property does not exist', () => {
+		const data = { a: 'Xyz', b: 10 };
+		const result = tr_case(data, { type: 'uppercase', property: 'x' });
+		expect(result).toStrictEqual(data);
+	});
 });
