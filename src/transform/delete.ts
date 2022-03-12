@@ -3,5 +3,6 @@ import { Delete } from '../transformation';
 
 
 export function tr_delete(data: Data, { property }: Delete): Data {
-	return data;
+	const { [property]: _, ...rest } = data;
+	return rest;
 }
