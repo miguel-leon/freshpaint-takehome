@@ -26,6 +26,11 @@ describe('transformation cast', () => {
 			const result = tr_cast(data, { property: 'b', to: 'boolean' } as any);
 			expect(result).toHaveProperty('b', false);
 		});
+
+		test('do nothing if not valid boolean', () => {
+			const result = tr_cast(data, { property: 'c', to: 'boolean' } as any);
+			expect(result).toHaveProperty('c', '999');
+		});
 	});
 
 	describe('casts from boolean', () => {
